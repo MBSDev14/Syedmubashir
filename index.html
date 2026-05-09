@@ -669,6 +669,21 @@
   /* Tablet to Mobile (768px and below) */
   @media (max-width: 768px) {
     /* Navigation */
+    .scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 42%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: fadeUp 0.8s 0.5s ease both;
+}
     nav { padding: 1rem 1.5rem; }
     .nav-links {
       position: fixed; top: 100%; left: 0; right: 0;
