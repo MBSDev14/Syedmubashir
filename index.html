@@ -231,6 +231,16 @@
  .about-visual{
     transition:  0.9s ease;
 }
+
+  @media (hover: none), (pointer: coarse) {
+    .about-visual:hover {
+      transform: none;
+      box-shadow: none;
+      border-color: transparent;
+      padding: 0;
+    }
+  }
+
   .nav-logo:hover,
   .intro-card:hover,
   .stat-card:hover,
