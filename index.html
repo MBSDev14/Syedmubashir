@@ -169,7 +169,11 @@
   }
   .hero-tech-pill i { font-size: 0.65rem; color: var(--accent2); }
 
-  .intro-section { padding: 4rem 2rem; max-width: 1000px; margin: 0 auto; }
+  .intro-section {
+    padding: 1.2rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
   .intro-card {
     background: var(--glass); border: 1px solid var(--glass-border);
     border-radius: 32px; padding: 3rem; backdrop-filter: blur(20px); text-align: left;
@@ -520,12 +524,15 @@
     .nav-links li { margin: 0.5rem 0; }
     .nav-links a { font-size: 1rem; padding: 0.5rem 0; display: flex; justify-content: center; }
     .hamburger { display: flex; }
-    .hero-content { padding: 6rem 1rem 3rem; }
+            .hero-content {
+        padding: 0.1rem 1rem 3rem;
+    }
+  
     h1 { font-size: clamp(2.5rem, 12vw, 4rem); }
     .hero-sub { font-size: 0.95rem; }
     .hero-cta { flex-direction: column; align-items: center; }
     .btn { width: 100%; max-width: 280px; justify-content: center; }
-    #about, #skills, #experience, #projects, #contact { padding: 4rem 1rem; }
+    #about, #skills, #experience, #projects, #contact { padding: 3rem 1rem; }
     .about-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
     .avatar-container { width: 260px; height: 260px; margin: 0 auto; }
     .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
@@ -533,17 +540,40 @@
     .projects-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     .contact-card { padding: 2rem 1.2rem; }
     .social-links { flex-wrap: wrap; }
-    .scroll-indicator { left: 42%; }
+        .scroll-indicator {
+        left: 45%;
+        bottom: 0px;
+    }
     .intro-highlights { justify-content: center; }
     font-size: clamp(1.4rem, 4vw, 3.2rem);
+
+    .exp-item {
+    padding-left: 0rem;
+}
+
+    .intro-card {
+    padding: 2rem;
+}
+    .section-tag {
+    justify-content: center;
+}
   }
   @media (max-width: 480px) {
     h1 { font-size: clamp(2rem, 10vw, 3.5rem); }
     .avatar-container { width: 220px; height: 220px; }
     .section-title {
     font-size: clamp(1.4rem, 4vw, 3.2rem);
-    
 }
+    .intro-section {
+    padding: 2rem 1rem;
+}
+    #about, #skills, #experience, #projects, #contact {
+        padding: 2rem 1rem;
+    }
+        .social-links {
+        flex-wrap: wrap;
+        gap: 30px 30px;
+    }
   }
 </style>
 </head>
