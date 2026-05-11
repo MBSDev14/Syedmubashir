@@ -7,7 +7,7 @@
 <meta name="description" content="Syed Mubashir Ali is an expert WordPress Developer, CMS Developer, and WPBakery Expert crafting modern, responsive, premium websites for international clients.">
 <meta name="keywords" content="WordPress Developer, CMS Developer, WPBakery Expert, WordPress Website Designer, Elementor Expert, Web Developer, Responsive WordPress Site">
 <meta property="og:title" content="Syed Mubashir Ali | WordPress Developer & WPBakery Expert">
-<meta property="og:description" content=" Premium WordPress and CMS website development with expert WPBakery, Elementor, and responsive WordPress design for global clients.">
+<meta property="og:description" content="Premium WordPress and CMS website development with expert WPBakery, Elementor, and responsive WordPress design for global clients.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="profile.jpg">
 <meta property="og:image:alt" content="Syed Mubashir Ali professional profile photo">
@@ -56,7 +56,7 @@
   .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
   section { position: relative; z-index: 1; }
   #hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; }
-  .hero-content { max-width: 900px; }
+  .hero-content { max-width: 1000px; }
   .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 100px; font-size: 0.78rem; color: var(--accent2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2rem; animation: fadeUp 0.8s ease both; }
   .badge-dot { width: 6px; height: 6px; background: var(--accent2); border-radius: 50%; animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100% { opacity:1;transform:scale(1); } 50% { opacity:0.4;transform:scale(0.7); } }
@@ -74,7 +74,7 @@
   .intro-highlights { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
   .intro-highlight { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: rgba(62,207,207,0.05); border: 1px solid rgba(62,207,207,0.15); border-radius: 100px; font-size: 0.8rem; color: var(--accent2); }
   .intro-highlight i { font-size: 0.75rem; }
-  .nav-logo:hover, .intro-card:hover, .stat-card:hover, .skill-card:hover, .exp-card:hover, .project-card:hover, .contact-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(62,207,207,0.1); border-color: rgba(62,207,207,0.18); }
+  .nav-logo:hover, .intro-card:hover, .stat-card:hover, .skill-card:hover, .exp-card:hover, .contact-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(62,207,207,0.1); border-color: rgba(62,207,207,0.18); }
   .about-visual { transition: 0.9s ease; }
   .about-visual:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(62,207,207,0.1); border-color: rgba(62,207,207,2.18); border-radius: 50%; padding: 80px; }
   @media (hover: none), (pointer: coarse) { .about-visual:hover { transform: none; box-shadow: none; border-color: transparent; padding: 0; } }
@@ -146,52 +146,158 @@
   .exp-points { list-style: none; }
   .exp-points li { color: var(--muted); font-size: 0.9rem; line-height: 1.7; padding: 4px 0 4px 1.2rem; position: relative; }
   .exp-points li::before { content: '▸'; position: absolute; left: 0; color: var(--accent2); font-size: 0.7rem; top: 6px; }
-  #projects { padding: 8rem 2rem; background: linear-gradient(180deg, transparent, rgba(62,207,207,0.02) 50%, transparent); }
-  .projects-inner { max-width: 1200px; margin: 0 auto; }
-  .projects-header { text-align: center; margin-bottom: 4rem; }
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
-  .project-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 24px; overflow: hidden; transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; backdrop-filter: blur(10px); }
-  .project-card:hover { transform: translateY(-8px); box-shadow: 0 30px 80px rgba(0,0,0,0.3); border-color: rgba(124,92,191,0.3); }
-  .project-preview { height: 180px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
-  .project-preview .project-bg { position: absolute; inset: 0; opacity: 0.15; }
-  .project-body { padding: 1.8rem; }
-  .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1rem; }
-  .project-tag { background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 100px; padding: 3px 10px; font-size: 0.72rem; color: var(--accent2); display: inline-flex; align-items: center; gap: 4px; }
-  .project-tag i { font-size: 0.65rem; }
-  .project-title { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 8px; }
-  .project-title i { color: var(--accent2); font-size: 1rem; }
-  .project-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.7; }
 
-  /* ===== RESUME SECTION ===== */
-  #resume { padding: 2rem 2rem; max-width: 1000px; margin: 0 auto; }
-  .resume-inner { }
-  .resume-header { text-align: center; margin-bottom: 3rem; }
-  .resume-card {
+  /* ===== PROJECTS ===== */
+  #projects { padding: 8rem 2rem; background: linear-gradient(180deg, transparent, rgba(62,207,207,0.015) 50%, transparent); }
+  .projects-inner { max-width: 1280px; margin: 0 auto; }
+  .projects-header { text-align: center; margin-bottom: 3.5rem; }
+  .projects-header p { color: var(--muted); font-size: 0.95rem; max-width: 520px; margin: 0.8rem auto 0; }
+
+  /* Responsive 3-col grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+  }
+
+  /* Card */
+  .project-card {
     background: var(--glass);
     border: 1px solid var(--glass-border);
-    border-radius: 32px;
-    padding: 3rem;
-    backdrop-filter: blur(20px);
-    position: relative;
+    border-radius: 20px;
     overflow: hidden;
-    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.38s cubic-bezier(0.23,1,0.32,1), box-shadow 0.38s ease, border-color 0.38s ease;
+    backdrop-filter: blur(12px);
   }
-  .resume-card::before {
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 32px 80px rgba(0,0,0,0.35), 0 0 0 1px rgba(62,207,207,0.12);
+    border-color: rgba(62,207,207,0.22);
+  }
+
+  /* Image area */
+  .project-img {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.55s cubic-bezier(0.23,1,0.32,1), filter 0.4s ease;
+    filter: brightness(0.78) saturate(1.05);
+  }
+  .project-card:hover .project-img img {
+    transform: scale(1.09);
+    filter: brightness(0.92) saturate(1.15);
+  }
+  /* Dark gradient at bottom of image */
+  .project-img::after {
     content: '';
     position: absolute;
-    top: -80px; right: -80px;
-    width: 300px; height: 300px;
-    background: radial-gradient(circle, rgba(124,92,191,0.10) 0%, transparent 70%);
+    bottom: 0; left: 0; right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(5,5,8,0.85) 0%, transparent 100%);
     pointer-events: none;
+    z-index: 1;
   }
-  .resume-card::after {
-    content: '';
+  /* Category badge on image */
+  .img-badge {
     position: absolute;
-    bottom: -60px; left: -60px;
-    width: 220px; height: 220px;
-    background: radial-gradient(circle, rgba(62,207,207,0.07) 0%, transparent 70%);
-    pointer-events: none;
+    bottom: 12px;
+    left: 14px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 13px;
+    background: rgba(5,5,8,0.72);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(62,207,207,0.3);
+    border-radius: 100px;
+    font-size: 0.71rem;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--accent2);
+    letter-spacing: 0.04em;
+    font-weight: 500;
   }
+  .img-badge i { font-size: 0.62rem; }
+  /* WP badge top-right */
+  .img-wp {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    background: rgba(5,5,8,0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(124,92,191,0.35);
+    border-radius: 100px;
+    font-size: 0.68rem;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #a78bfa;
+    font-weight: 500;
+  }
+  .img-wp i { font-size: 0.7rem; }
+
+  /* Card body */
+  .project-body {
+    padding: 1.4rem 1.5rem 1.6rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 0.75rem;
+  }
+  .project-tag {
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 100px;
+    padding: 2px 9px;
+    font-size: 0.69rem;
+    color: rgba(240,238,255,0.55);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .project-tag i { font-size: 0.6rem; color: var(--accent2); }
+  .project-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    line-height: 1.3;
+  }
+  .project-title i { color: var(--accent2); font-size: 0.9rem; flex-shrink: 0; }
+  .project-desc {
+    color: var(--muted);
+    font-size: 0.83rem;
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  /* ===== RESUME ===== */
+  #resume { padding: 2rem 2rem; max-width: 1000px; margin: 0 auto; }
+  .resume-header { text-align: center; margin-bottom: 3rem; }
+  .resume-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 32px; padding: 3rem; backdrop-filter: blur(20px); position: relative; overflow: hidden; transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
+  .resume-card::before { content: ''; position: absolute; top: -80px; right: -80px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(124,92,191,0.10) 0%, transparent 70%); pointer-events: none; }
+  .resume-card::after { content: ''; position: absolute; bottom: -60px; left: -60px; width: 220px; height: 220px; background: radial-gradient(circle, rgba(62,207,207,0.07) 0%, transparent 70%); pointer-events: none; }
   .resume-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(62,207,207,0.1); border-color: rgba(62,207,207,0.18); }
   .resume-content { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; position: relative; z-index: 1; }
   .resume-info { flex: 1; min-width: 200px; }
@@ -201,30 +307,12 @@
   .resume-pill { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 100px; font-size: 0.72rem; color: var(--muted); }
   .resume-pill i { font-size: 0.62rem; color: var(--accent2); }
   .resume-btns { display: flex; flex-direction: column; gap: 0.8rem; flex-shrink: 0; }
-  .res-btn {
-    display: inline-flex; align-items: center; gap: 9px;
-    padding: 0.8rem 1.6rem;
-    border-radius: 100px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.88rem; font-weight: 500;
-    text-decoration: none;
-    cursor: none;
-    border: none;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
+  .res-btn { display: inline-flex; align-items: center; gap: 9px; padding: 0.8rem 1.6rem; border-radius: 100px; font-family: 'Space Grotesk', sans-serif; font-size: 0.88rem; font-weight: 500; text-decoration: none; cursor: none; border: none; transition: all 0.3s ease; white-space: nowrap; }
   .res-btn i { font-size: 0.95rem; transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1); }
   .res-btn:hover i { transform: scale(1.25); }
-  .res-btn-primary {
-    background: linear-gradient(135deg, var(--accent2), var(--accent));
-    color: #050508;
-  }
+  .res-btn-primary { background: linear-gradient(135deg, var(--accent2), var(--accent)); color: #050508; }
   .res-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(62,207,207,0.35); }
-  .res-btn-secondary {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: var(--text);
-  }
+  .res-btn-secondary { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--text); }
   .res-btn-secondary:hover { transform: translateY(-3px); background: rgba(124,92,191,0.1); border-color: rgba(124,92,191,0.35); box-shadow: 0 14px 40px rgba(124,92,191,0.2); }
   .res-btn-secondary i { color: var(--accent2); }
   .resume-divider { height: 1px; background: linear-gradient(90deg, rgba(62,207,207,0.25), rgba(124,92,191,0.15), transparent); margin: 2rem 0; position: relative; z-index: 1; }
@@ -232,24 +320,10 @@
   .resume-formats span { font-size: 0.8rem; color: var(--muted); }
   .resume-format-tag { display: inline-flex; align-items: center; gap: 5px; padding: 5px 13px; background: rgba(62,207,207,0.05); border: 1px solid rgba(62,207,207,0.15); border-radius: 100px; font-size: 0.75rem; color: var(--accent2); }
   .resume-format-tag i { font-size: 0.65rem; }
-
   /* Resume Modal */
-  .resume-modal-overlay {
-    display: none; position: fixed; inset: 0;
-    background: rgba(5,5,8,0.85); backdrop-filter: blur(10px);
-    z-index: 9990; align-items: center; justify-content: center;
-  }
+  .resume-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(5,5,8,0.85); backdrop-filter: blur(10px); z-index: 9990; align-items: center; justify-content: center; }
   .resume-modal-overlay.open { display: flex; }
-  .resume-modal {
-    background: #0d0d18;
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 28px;
-    padding: 2.5rem;
-    max-width: 480px; width: 92%;
-    position: relative;
-    box-shadow: 0 40px 120px rgba(0,0,0,0.7), 0 0 80px rgba(62,207,207,0.08);
-    animation: modalIn 0.35s cubic-bezier(0.34,1.56,0.64,1) both;
-  }
+  .resume-modal { background: #0d0d18; border: 1px solid rgba(255,255,255,0.1); border-radius: 28px; padding: 2.5rem; max-width: 480px; width: 92%; position: relative; box-shadow: 0 40px 120px rgba(0,0,0,0.7), 0 0 80px rgba(62,207,207,0.08); animation: modalIn 0.35s cubic-bezier(0.34,1.56,0.64,1) both; }
   @keyframes modalIn { from { opacity:0; transform:scale(0.88) translateY(20px); } to { opacity:1; transform:scale(1) translateY(0); } }
   .rm-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.8rem; }
   .rm-title { font-family: 'Syne', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 9px; }
@@ -257,16 +331,7 @@
   .rm-close { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: none; color: var(--muted); font-size: 1rem; transition: all 0.2s; }
   .rm-close:hover { background: rgba(255,255,255,0.12); color: var(--text); }
   .rm-body { display: flex; flex-direction: column; gap: 0.8rem; }
-  .rm-opt {
-    display: flex; align-items: center; gap: 14px;
-    padding: 1.1rem 1.3rem;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 18px;
-    cursor: none; text-decoration: none;
-    transition: all 0.25s ease;
-    position: relative; overflow: hidden;
-  }
+  .rm-opt { display: flex; align-items: center; gap: 14px; padding: 1.1rem 1.3rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 18px; cursor: none; text-decoration: none; transition: all 0.25s ease; position: relative; overflow: hidden; }
   .rm-opt::before { content: ''; position: absolute; inset: 0; background: rgba(62,207,207,0.04); opacity: 0; transition: opacity 0.2s; }
   .rm-opt:hover { border-color: rgba(62,207,207,0.25); transform: translateX(5px); }
   .rm-opt:hover::before { opacity: 1; }
@@ -278,7 +343,6 @@
   .rm-desc { font-size: 0.78rem; color: var(--muted); margin-top: 3px; }
   .rm-arrow { color: rgba(240,238,255,0.2); font-size: 0.85rem; transition: all 0.2s; }
   .rm-opt:hover .rm-arrow { color: var(--accent2); transform: translateX(3px); }
-  /* ===== END RESUME ===== */
 
   #contact { padding: 2rem 2rem; max-width: 1000px; margin: 0 auto; text-align: center; }
   .contact-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 32px; padding: 4rem 3rem; backdrop-filter: blur(20px); position: relative; overflow: hidden; transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
@@ -304,12 +368,13 @@
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: rgba(124,92,191,0.4); border-radius: 3px; }
 
+  /* ===== RESPONSIVE ===== */
   @media (max-width: 1600px) {
-    .scroll-indicator { bottom: -2rem; left: 50%; }
-    #about { padding: 2rem 2rem; }
-    #skills { padding: 2rem 2rem; }
-    #experience { padding: 2rem 2rem; }
-    #projects { padding: 2rem 2rem; }
+    .scroll-indicator { bottom: -2rem; }
+    #about,#skills,#experience,#projects { padding: 2rem 2rem; }
+  }
+  @media (max-width: 1100px) {
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 1024px) {
     nav { padding: 1.2rem 2rem; }
@@ -330,41 +395,37 @@
     .hero-sub { font-size: 0.95rem; }
     .hero-cta { flex-direction: column; align-items: center; }
     .btn { width: 100%; max-width: 280px; justify-content: center; }
-    #about, #skills, #experience, #projects, #contact, #resume { padding: 3rem 1rem; }
+    #about,#skills,#experience,#projects,#contact,#resume { padding: 3rem 1rem; }
     .about-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
     .avatar-container { width: 260px; height: 260px; margin: 0 auto; }
     .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
     .skills-grid { grid-template-columns: 1fr; gap: 1rem; }
-    .projects-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .projects-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+    .project-img { height: 185px; }
     .contact-card { padding: 2rem 1.2rem; }
     .social-links { flex-wrap: wrap; }
-    .scroll-indicator { left: 45%; bottom: 0px; }
+    .scroll-indicator { left: 45%; bottom: 0; }
     .intro-highlights { justify-content: center; }
     .intro-card { padding: 2rem; }
     .section-tag { justify-content: center; }
     .resume-card { padding: 2rem 1.5rem; }
     .resume-btns { flex-direction: column; width: 100%; }
     .res-btn { justify-content: center; }
-    .rm-close {
-    width: 64px;
-}
+    .rm-close { width: 64px; }
   }
   @media (max-width: 480px) {
     h1 { font-size: clamp(2rem, 10vw, 3.5rem); }
     .avatar-container { width: 220px; height: 220px; }
     .section-title { font-size: clamp(1.4rem, 4vw, 3.2rem); }
     .intro-section { padding: 2rem 1rem; }
-    #about, #skills, #experience, #projects, #contact, #resume { padding: 2rem 1rem; }
-    .social-links { flex-wrap: wrap; gap: 30px 30px; }
-      .social-link {
-    width: 100%;
-}
+    #about,#skills,#experience,#projects,#contact,#resume { padding: 2rem 1rem; }
+    .social-links { flex-wrap: wrap; gap: 12px; }
+    .social-link { width: 100%; }
+    .project-img { height: 170px; }
   }
-
 </style>
 </head>
 <body>
-
 <div id="cursor"></div>
 <div id="cursor-ring"></div>
 <canvas id="bg-canvas"></canvas>
@@ -392,7 +453,7 @@
     <p class="hero-sub">CMS Web Developer specializing in WordPress, Shopify & Squarespace — crafting high-performance, conversion-focused digital experiences for global clients.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Let's Connect</a>
-      <a href="#experience" class="btn btn-outline"><i class="fas fa-briefcase"></i> View Work</a>
+      <a href="#projects" class="btn btn-outline"><i class="fas fa-layer-group"></i> View Projects</a>
     </div>
     <div class="hero-tech">
       <span class="hero-tech-pill"><i class="fab fa-wordpress"></i> WordPress</span>
@@ -403,10 +464,7 @@
       <span class="hero-tech-pill"><i class="fab fa-js"></i> JavaScript</span>
     </div>
   </div>
-  <div class="scroll-indicator">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
+  <div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
 
 <!-- INTRO -->
@@ -459,7 +517,7 @@
   <div class="skills-inner">
     <div class="skills-header reveal">
       <div class="section-tag" style="justify-content:center"><i class="fas fa-tools"></i> Technical Skills</div>
-      <h2 class="section-title gradient-text ">What I work with</h2>
+      <h2 class="section-title gradient-text">What I work with</h2>
     </div>
     <div class="skills-grid">
       <div class="skill-card reveal" style="--card-accent:#3ecfcf">
@@ -495,7 +553,7 @@
       </div>
       <div class="skill-card reveal" style="--card-accent:#3ecfcf">
         <div class="skill-icon"><i class="fas fa-code"></i></div>
-        <div class="skill-title">Front-End</div>
+        <div class="skill-title">Front-End Development</div>
         <div class="skill-desc">Building responsive, mobile-first interfaces with modern web technologies.</div>
         <div class="skill-tags">
           <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
@@ -517,7 +575,7 @@
       <div class="skill-card reveal" style="--card-accent:#f5a623">
         <div class="skill-icon"><i class="fas fa-earth-americas"></i></div>
         <div class="skill-title">Squarespace & Domains</div>
-        <div class="skill-desc">Template Design , DNS & domain configuration.</div>
+        <div class="skill-desc">Template Design, DNS & domain configuration for professional online presence.</div>
         <div class="skill-tags">
           <span class="skill-tag"><i class="fas fa-syringe"></i> Template Design</span>
           <span class="skill-tag"><i class="fas fa-network-wired"></i> DNS Config</span>
@@ -585,64 +643,184 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- ===== PROJECTS ===== -->
 <section id="projects">
   <div class="projects-inner">
     <div class="projects-header reveal">
       <div class="section-tag" style="justify-content:center"><i class="fas fa-layer-group"></i> Projects</div>
       <h2 class="section-title gradient-text">What I've built</h2>
+      <p>100+ real client websites across industries — all built on WordPress.</p>
     </div>
+
     <div class="projects-grid">
+
+      <!-- 1. Business Website -->
       <div class="project-card reveal">
-        <div class="project-preview" style="background:linear-gradient(135deg,#0a0a2e,#1a0533)">
-          <div class="project-bg" style="background:radial-gradient(circle at 30% 50%,#7c5cbf,transparent)"></div>
-          <i class="fas fa-building" style="color:rgba(124,92,191,0.6);font-size:3rem;position:relative;z-index:1"></i>
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&fit=crop&crop=top" alt="Corporate Business Website" loading="lazy">
+          <span class="img-wp"><i class="fab fa-wordpress"></i> WordPress</span>
+          <span class="img-badge"><i class="fas fa-briefcase"></i> Business</span>
         </div>
         <div class="project-body">
           <div class="project-tags">
-            <span class="project-tag"><i class="fab fa-wordpress"></i> WordPress</span>
             <span class="project-tag"><i class="fas fa-cube"></i> Elementor</span>
+            <span class="project-tag"><i class="fas fa-paint-brush"></i> Salient</span>
             <span class="project-tag"><i class="fas fa-flag-usa"></i> USA Client</span>
           </div>
-          <div class="project-title"><i class="fas fa-briefcase"></i> Corporate Business Websites</div>
-          <p class="project-desc">High-performance corporate websites for US-based clients using Salient Theme & Elementor with modern, conversion-focused designs.</p>
+          <div class="project-title"><i class="fas fa-building"></i> Corporate Business Websites</div>
+          <p class="project-desc">Professional corporate websites for US-based clients — modern layouts, service pages, team sections & contact forms using WPBakery & Elementor.</p>
         </div>
       </div>
+
+      <!-- 2. Shopify eCommerce -->
       <div class="project-card reveal">
-        <div class="project-preview" style="background:linear-gradient(135deg,#001a0a,#003320)">
-          <div class="project-bg" style="background:radial-gradient(circle at 70% 50%,#3ecfcf,transparent)"></div>
-          <i class="fab fa-shopify" style="color:rgba(62,207,207,0.6);font-size:3rem;position:relative;z-index:1"></i>
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80&fit=crop&crop=center" alt="Shopify eCommerce Store" loading="lazy">
+          <span class="img-wp"><i class="fab fa-shopify"></i> Shopify</span>
+          <span class="img-badge"><i class="fas fa-bag-shopping"></i> eCommerce</span>
         </div>
         <div class="project-body">
           <div class="project-tags">
-            <span class="project-tag"><i class="fab fa-shopify"></i> Shopify</span>
             <span class="project-tag"><i class="fas fa-droplet"></i> Liquid</span>
-            <span class="project-tag"><i class="fas fa-globe"></i> UAE Client</span>
+            <span class="project-tag"><i class="fas fa-credit-card"></i> Payments</span>
+            <span class="project-tag"><i class="fas fa-globe"></i> UAE / KSA</span>
           </div>
-          <div class="project-title"><i class="fas fa-cart-shopping"></i> Shopify E-Commerce Stores</div>
-          <p class="project-desc">Custom Shopify stores for UAE & Saudi Arabia clients — from theme development to full product catalogue & payment integration.</p>
+          <div class="project-title"><i class="fas fa-cart-shopping"></i> Shopify eCommerce Stores</div>
+          <p class="project-desc">Custom Shopify stores for UAE & Saudi Arabia clients — complete theme setup, product catalogue, payment gateway & checkout optimization.</p>
         </div>
       </div>
+
+      <!-- 3. WooCommerce -->
       <div class="project-card reveal">
-        <div class="project-preview" style="background:linear-gradient(135deg,#1a1000,#2a1a00)">
-          <div class="project-bg" style="background:radial-gradient(circle at 50% 30%,#f5a623,transparent)"></div>
-          <i class="fas fa-square" style="color:rgba(245,166,35,0.6);font-size:3rem;position:relative;z-index:1"></i>
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&fit=crop&crop=center" alt="WooCommerce WordPress Store" loading="lazy">
+          <span class="img-wp"><i class="fab fa-wordpress"></i> WooCommerce</span>
+          <span class="img-badge"><i class="fas fa-store"></i> Online Store</span>
         </div>
         <div class="project-body">
           <div class="project-tags">
-            <span class="project-tag"><i class="fas fa-square"></i> Squarespace</span>
-            <span class="project-tag"><i class="fab fa-css3-alt"></i> CSS</span>
-            <span class="project-tag"><i class="fas fa-network-wired"></i> DNS</span>
+            <span class="project-tag"><i class="fas fa-cart-plus"></i> WooCommerce</span>
+            <span class="project-tag"><i class="fas fa-plug"></i> Plugins</span>
+            <span class="project-tag"><i class="fas fa-credit-card"></i> Payments</span>
           </div>
-          <div class="project-title"><i class="fas fa-paint-brush"></i> Squarespace Brand Portals</div>
-          <p class="project-desc">Visually refined Squarespace sites , domain configuration & complete services setup.</p>
+          <div class="project-title"><i class="fas fa-store"></i> WooCommerce Stores</div>
+          <p class="project-desc">Full WooCommerce shops on WordPress — product listings, filters, cart, secure checkout, inventory management & order tracking.</p>
         </div>
       </div>
+
+      <!-- 4. Book / Publishing Website -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80&fit=crop&crop=center" alt="Book Publishing Website" loading="lazy">
+          <span class="img-wp"><i class="fab fa-wordpress"></i> WordPress</span>
+          <span class="img-badge"><i class="fas fa-book-open"></i> Books</span>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag"><i class="fas fa-book"></i> Publishing</span>
+            <span class="project-tag"><i class="fas fa-pen-nib"></i> Author</span>
+            <span class="project-tag"><i class="fas fa-cube"></i> Elementor</span>
+          </div>
+          <div class="project-title"><i class="fas fa-book-open"></i> Book & Author Websites</div>
+          <p class="project-desc">Author portfolios and book publishing sites with chapter previews, purchase links, blog sections and newsletter signup integrations.</p>
+        </div>
+      </div>
+
+      <!-- 5. Donation / Charity -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&q=80&fit=crop&crop=center" alt="Donation Charity Website" loading="lazy">
+          <span class="img-wp"><i class="fab fa-wordpress"></i> WordPress</span>
+          <span class="img-badge"><i class="fas fa-hand-holding-heart"></i> Charity</span>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag"><i class="fas fa-heart"></i> Non-Profit</span>
+            <span class="project-tag"><i class="fas fa-hand-holding-dollar"></i> Donations</span>
+            <span class="project-tag"><i class="fas fa-users"></i> Community</span>
+          </div>
+          <div class="project-title"><i class="fas fa-hand-holding-heart"></i> Donation & Charity Sites</div>
+          <p class="project-desc">Non-profit and charity websites with fundraising campaigns, donation forms, progress bars, cause pages and secure payment integrations.</p>
+        </div>
+      </div>
+
+      <!-- 6. Tutoring / Education -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80&fit=crop&crop=center" alt="Tutor Education Website" loading="lazy">
+          <span class="img-wp"><i class="fab fa-wordpress"></i> WordPress</span>
+          <span class="img-badge"><i class="fas fa-graduation-cap"></i> Education</span>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag"><i class="fas fa-chalkboard-teacher"></i> Tutors</span>
+            <span class="project-tag"><i class="fas fa-calendar-check"></i> Booking</span>
+            <span class="project-tag"><i class="fas fa-certificate"></i> Courses</span>
+          </div>
+          <div class="project-title"><i class="fas fa-graduation-cap"></i> Tutor & Education Sites</div>
+          <p class="project-desc">Online tutoring and education platforms with course listings, tutor profiles, appointment booking, testimonials and student inquiry forms.</p>
+        </div>
+      </div>
+
+      <!-- 7. Travel Website -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80&fit=crop&crop=center" alt="Travel Tourism Website" loading="lazy">
+          <span class="img-wp"><i class="fab fa-wordpress"></i> WordPress</span>
+          <span class="img-badge"><i class="fas fa-plane"></i> Travel</span>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag"><i class="fas fa-map-location-dot"></i> Tours</span>
+            <span class="project-tag"><i class="fas fa-calendar"></i> Booking</span>
+            <span class="project-tag"><i class="fas fa-images"></i> Galleries</span>
+          </div>
+          <div class="project-title"><i class="fas fa-plane-departure"></i> Travel & Tour Websites</div>
+          <p class="project-desc">Travel agency and tour operator sites with destination pages, package listings, online booking forms, photo galleries and inquiry flows.</p>
+        </div>
+      </div>
+
+      <!-- 8. Real Estate / Property -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80&fit=crop&crop=center" alt="Real Estate Property Website" loading="lazy">
+          <span class="img-wp"><i class="fab fa-wordpress"></i> WordPress</span>
+          <span class="img-badge"><i class="fas fa-house"></i> Real Estate</span>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag"><i class="fas fa-building"></i> Property</span>
+            <span class="project-tag"><i class="fas fa-search-location"></i> Listings</span>
+            <span class="project-tag"><i class="fas fa-map-pin"></i> Maps</span>
+          </div>
+          <div class="project-title"><i class="fas fa-house-chimney"></i> Property Selling Sites</div>
+          <p class="project-desc">Real estate websites with property listings, advanced search filters, Google Maps integration, agent profiles and lead capture forms.</p>
+        </div>
+      </div>
+
+      <!-- 9. Squarespace / Portfolio -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1545665277-5937489579f2?w=800&q=80&fit=crop&crop=center" alt="Portfolio Squarespace Website" loading="lazy">
+          <span class="img-wp"><i class="fas fa-square"></i> Squarespace</span>
+          <span class="img-badge"><i class="fas fa-address-card"></i> Portfolio</span>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="project-tag"><i class="fas fa-palette"></i> Design</span>
+            <span class="project-tag"><i class="fas fa-network-wired"></i> DNS Setup</span>
+            <span class="project-tag"><i class="fab fa-css3-alt"></i> Custom CSS</span>
+          </div>
+          <div class="project-title"><i class="fas fa-layer-group"></i> Squarespace & Portfolio Sites</div>
+          <p class="project-desc">Visually polished Squarespace portfolio and brand sites with custom CSS, domain configuration, gallery layouts and contact integrations.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== RESUME SECTION ===== -->
+<!-- RESUME -->
 <section id="resume">
   <div class="resume-inner">
     <div class="resume-header reveal">
@@ -652,7 +830,7 @@
     <div class="resume-card reveal">
       <div class="resume-content">
         <div class="resume-info">
-          <h3 class="gradient-text" >Syed Mubashir Ali</h3>
+          <h3 class="gradient-text">Syed Mubashir Ali</h3>
           <p>CMS Web Developer — WordPress, Shopify & Squarespace specialist with 2+ years of experience delivering 100+ websites for global clients.</p>
           <div class="resume-pills">
             <span class="resume-pill"><i class="fas fa-file-pdf"></i> PDF Format</span>
@@ -690,24 +868,17 @@
     <div class="rm-body">
       <a class="rm-opt" href="https://drive.google.com/uc?export=download&id=1Noa-r2oE2RVBfzopnJ_dTyE0V0F-qFlk" download="Syed_Mubashir_Ali_Resume.pdf" target="_blank">
         <div class="rm-icon dl"><i class="fas fa-cloud-arrow-down"></i></div>
-        <div class="rm-text">
-          <div class="rm-label">Download Resume</div>
-          <div class="rm-desc">Save PDF to your device — one click, instant download</div>
-        </div>
+        <div class="rm-text"><div class="rm-label">Download Resume</div><div class="rm-desc">Save PDF to your device — one click, instant download</div></div>
         <i class="fas fa-chevron-right rm-arrow"></i>
       </a>
       <a class="rm-opt" href="https://drive.google.com/file/d/1Noa-r2oE2RVBfzopnJ_dTyE0V0F-qFlk/view?usp=sharing" target="_blank">
         <div class="rm-icon rd"><i class="fas fa-book-open"></i></div>
-        <div class="rm-text">
-          <div class="rm-label">Read in Browser</div>
-          <div class="rm-desc">Preview PDF directly — no download required</div>
-        </div>
+        <div class="rm-text"><div class="rm-label">Read in Browser</div><div class="rm-desc">Preview PDF directly — no download required</div></div>
         <i class="fas fa-chevron-right rm-arrow"></i>
       </a>
     </div>
   </div>
 </div>
-<!-- ===== END RESUME ===== -->
 
 <!-- CONTACT -->
 <section id="contact">
@@ -751,87 +922,78 @@
 <script>
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursor-ring');
-let mx = 0, my = 0, rx = 0, ry = 0;
-document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx-6+'px'; cursor.style.top = my-6+'px'; });
-function animRing() { rx += (mx-rx)*0.12; ry += (my-ry)*0.12; ring.style.left = rx-18+'px'; ring.style.top = ry-18+'px'; requestAnimationFrame(animRing); }
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx-6+'px';cursor.style.top=my-6+'px';});
+function animRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx-18+'px';ring.style.top=ry-18+'px';requestAnimationFrame(animRing);}
 animRing();
-document.querySelectorAll('a, button').forEach(el => {
-  el.addEventListener('mouseenter', () => { cursor.style.transform='scale(2)'; ring.style.transform='scale(1.5)'; });
-  el.addEventListener('mouseleave', () => { cursor.style.transform='scale(1)'; ring.style.transform='scale(1)'; });
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.transform='scale(2)';ring.style.transform='scale(1.5)';});
+  el.addEventListener('mouseleave',()=>{cursor.style.transform='scale(1)';ring.style.transform='scale(1)';});
 });
-
 try {
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('bg-canvas'), alpha: true, antialias: true });
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  camera.position.z = 30;
-  const particleCount = 1200;
-  const positions = new Float32Array(particleCount*3);
-  const colors = new Float32Array(particleCount*3);
-  const sizes = new Float32Array(particleCount);
-  const palette = [[0.49,0.36,0.75],[0.24,0.81,0.81],[0.96,0.65,0.14],[1,1,1]];
-  for (let i = 0; i < particleCount; i++) {
-    positions[i*3]=(Math.random()-0.5)*120; positions[i*3+1]=(Math.random()-0.5)*120; positions[i*3+2]=(Math.random()-0.5)*60;
-    const c=palette[Math.floor(Math.random()*palette.length)]; const alpha=0.3+Math.random()*0.7;
-    colors[i*3]=c[0]*alpha; colors[i*3+1]=c[1]*alpha; colors[i*3+2]=c[2]*alpha;
-    sizes[i]=Math.random()*2+0.5;
+  const scene=new THREE.Scene();
+  const camera=new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+  const renderer=new THREE.WebGLRenderer({canvas:document.getElementById('bg-canvas'),alpha:true,antialias:true});
+  renderer.setSize(window.innerWidth,window.innerHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  camera.position.z=30;
+  const particleCount=1200;
+  const positions=new Float32Array(particleCount*3);
+  const colors=new Float32Array(particleCount*3);
+  const palette=[[0.49,0.36,0.75],[0.24,0.81,0.81],[0.96,0.65,0.14],[1,1,1]];
+  for(let i=0;i<particleCount;i++){
+    positions[i*3]=(Math.random()-0.5)*120;positions[i*3+1]=(Math.random()-0.5)*120;positions[i*3+2]=(Math.random()-0.5)*60;
+    const c=palette[Math.floor(Math.random()*palette.length)];const alpha=0.3+Math.random()*0.7;
+    colors[i*3]=c[0]*alpha;colors[i*3+1]=c[1]*alpha;colors[i*3+2]=c[2]*alpha;
   }
-  const geo = new THREE.BufferGeometry();
-  geo.setAttribute('position', new THREE.BufferAttribute(positions,3));
-  geo.setAttribute('color', new THREE.BufferAttribute(colors,3));
-  geo.setAttribute('size', new THREE.BufferAttribute(sizes,1));
-  const mat = new THREE.PointsMaterial({ size:0.3, vertexColors:true, transparent:true, opacity:0.8, sizeAttenuation:true });
-  const particles = new THREE.Points(geo, mat);
+  const geo=new THREE.BufferGeometry();
+  geo.setAttribute('position',new THREE.BufferAttribute(positions,3));
+  geo.setAttribute('color',new THREE.BufferAttribute(colors,3));
+  const mat=new THREE.PointsMaterial({size:0.3,vertexColors:true,transparent:true,opacity:0.8,sizeAttenuation:true});
+  const particles=new THREE.Points(geo,mat);
   scene.add(particles);
-  function makeFloater(g, color, x, y, z) {
-    const m = new THREE.MeshBasicMaterial({ color, wireframe:true, transparent:true, opacity:0.06 });
-    const mesh = new THREE.Mesh(g,m); mesh.position.set(x,y,z); scene.add(mesh); return mesh;
-  }
-  const floaters = [
+  function makeFloater(g,color,x,y,z){const m=new THREE.MeshBasicMaterial({color,wireframe:true,transparent:true,opacity:0.06});const mesh=new THREE.Mesh(g,m);mesh.position.set(x,y,z);scene.add(mesh);return mesh;}
+  const floaters=[
     makeFloater(new THREE.IcosahedronGeometry(8,1),0x7c5cbf,-20,10,-10),
     makeFloater(new THREE.OctahedronGeometry(5,0),0x3ecfcf,20,-8,-5),
     makeFloater(new THREE.TorusGeometry(6,1.5,8,20),0xf5a623,0,-15,-15),
     makeFloater(new THREE.IcosahedronGeometry(4,0),0x3ecfcf,15,12,-8),
   ];
-  const rotSpeeds = floaters.map(()=>({ x:(Math.random()-0.5)*0.003, y:(Math.random()-0.5)*0.003, z:(Math.random()-0.5)*0.002 }));
-  let scrollY=0, mouseX=0, mouseY=0;
-  window.addEventListener('scroll', ()=>{ scrollY=window.scrollY; });
-  document.addEventListener('mousemove', e=>{ mouseX=(e.clientX/window.innerWidth-0.5)*2; mouseY=-(e.clientY/window.innerHeight-0.5)*2; });
-  window.addEventListener('resize', ()=>{ camera.aspect=window.innerWidth/window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth,window.innerHeight); });
+  const rotSpeeds=floaters.map(()=>({x:(Math.random()-0.5)*0.003,y:(Math.random()-0.5)*0.003,z:(Math.random()-0.5)*0.002}));
+  let scrollY=0,mouseX=0,mouseY=0;
+  window.addEventListener('scroll',()=>{scrollY=window.scrollY;});
+  document.addEventListener('mousemove',e=>{mouseX=(e.clientX/window.innerWidth-0.5)*2;mouseY=-(e.clientY/window.innerHeight-0.5)*2;});
+  window.addEventListener('resize',()=>{camera.aspect=window.innerWidth/window.innerHeight;camera.updateProjectionMatrix();renderer.setSize(window.innerWidth,window.innerHeight);});
   let t=0;
-  function animate() {
-    requestAnimationFrame(animate); t+=0.003;
-    particles.rotation.y=t*0.05+mouseX*0.05; particles.rotation.x=mouseY*0.03; particles.position.y=-scrollY*0.01;
-    floaters.forEach((f,i)=>{ f.rotation.x+=rotSpeeds[i].x; f.rotation.y+=rotSpeeds[i].y; f.rotation.z+=rotSpeeds[i].z; f.position.y+=Math.sin(t+i)*0.008; });
-    camera.position.x+=(mouseX*2-camera.position.x)*0.02; camera.position.y+=(mouseY-camera.position.y)*0.02;
+  function animate(){
+    requestAnimationFrame(animate);t+=0.003;
+    particles.rotation.y=t*0.05+mouseX*0.05;particles.rotation.x=mouseY*0.03;particles.position.y=-scrollY*0.01;
+    floaters.forEach((f,i)=>{f.rotation.x+=rotSpeeds[i].x;f.rotation.y+=rotSpeeds[i].y;f.rotation.z+=rotSpeeds[i].z;f.position.y+=Math.sin(t+i)*0.008;});
+    camera.position.x+=(mouseX*2-camera.position.x)*0.02;camera.position.y+=(mouseY-camera.position.y)*0.02;
     renderer.render(scene,camera);
   }
   animate();
-} catch(e) { console.warn('Three.js failed:',e); document.getElementById('bg-canvas').style.display='none'; }
+} catch(e){console.warn('Three.js:',e);document.getElementById('bg-canvas').style.display='none';}
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); });
-}, { threshold:0.1 });
-document.querySelectorAll('.reveal, .exp-item').forEach(el => observer.observe(el));
-document.querySelectorAll('.skills-grid .skill-card').forEach((c,i)=>{ c.style.transitionDelay=i*0.08+'s'; });
-document.querySelectorAll('.projects-grid .project-card').forEach((c,i)=>{ c.style.transitionDelay=i*0.1+'s'; });
-document.querySelectorAll('.exp-item').forEach((c,i)=>{ c.style.transitionDelay=i*0.12+'s'; });
+const observer=new IntersectionObserver(entries=>{entries.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal,.exp-item').forEach(el=>observer.observe(el));
+document.querySelectorAll('.skills-grid .skill-card').forEach((c,i)=>{c.style.transitionDelay=i*0.08+'s';});
+document.querySelectorAll('.projects-grid .project-card').forEach((c,i)=>{c.style.transitionDelay=i*0.08+'s';});
+document.querySelectorAll('.exp-item').forEach((c,i)=>{c.style.transitionDelay=i*0.12+'s';});
 
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', ()=>{ hamburger.classList.toggle('active'); navLinks.classList.toggle('active'); document.body.style.overflow=navLinks.classList.contains('active')?'hidden':''; });
-document.querySelectorAll('.nav-links a').forEach(link=>{ link.addEventListener('click', ()=>{ hamburger.classList.remove('active'); navLinks.classList.remove('active'); document.body.style.overflow=''; }); });
-document.addEventListener('click', e=>{ if(!hamburger.contains(e.target)&&!navLinks.contains(e.target)){ hamburger.classList.remove('active'); navLinks.classList.remove('active'); document.body.style.overflow=''; } });
-document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ hamburger.classList.remove('active'); navLinks.classList.remove('active'); document.body.style.overflow=''; document.getElementById('resumeModal').classList.remove('open'); } });
+const hamburger=document.querySelector('.hamburger');
+const navLinks=document.querySelector('.nav-links');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navLinks.classList.toggle('active');document.body.style.overflow=navLinks.classList.contains('active')?'hidden':'';});
+document.querySelectorAll('.nav-links a').forEach(link=>{link.addEventListener('click',()=>{hamburger.classList.remove('active');navLinks.classList.remove('active');document.body.style.overflow='';});});
+document.addEventListener('click',e=>{if(!hamburger.contains(e.target)&&!navLinks.contains(e.target)){hamburger.classList.remove('active');navLinks.classList.remove('active');document.body.style.overflow='';}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){hamburger.classList.remove('active');navLinks.classList.remove('active');document.body.style.overflow='';document.getElementById('resumeModal').classList.remove('open');}});
 
-function easeInOutQuad(t){ return t<0.5?2*t*t:-1+(4-2*t)*t; }
-function smoothScrollTo(targetY, duration){ const startY=window.scrollY, diff=targetY-startY, startTime=performance.now(); function step(now){ const p=Math.min((now-startTime)/duration,1); window.scrollTo(0,startY+diff*easeInOutQuad(p)); if(p<1)requestAnimationFrame(step); } requestAnimationFrame(step); }
-document.querySelectorAll('a[href^="#"]').forEach(link=>{ link.addEventListener('click', e=>{ const target=document.getElementById(link.getAttribute('href').slice(1)); if(target){ e.preventDefault(); smoothScrollTo(target.getBoundingClientRect().top+window.scrollY,600); } }); });
+function easeInOutQuad(t){return t<0.5?2*t*t:-1+(4-2*t)*t;}
+function smoothScrollTo(targetY,duration){const startY=window.scrollY,diff=targetY-startY,startTime=performance.now();function step(now){const p=Math.min((now-startTime)/duration,1);window.scrollTo(0,startY+diff*easeInOutQuad(p));if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+document.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener('click',e=>{const target=document.getElementById(link.getAttribute('href').slice(1));if(target){e.preventDefault();smoothScrollTo(target.getBoundingClientRect().top+window.scrollY,600);}});});
 
-if('ontouchstart' in window){ document.body.style.cursor='auto'; document.querySelectorAll('a, button').forEach(el=>el.style.cursor='pointer'); document.getElementById('cursor').style.display='none'; document.getElementById('cursor-ring').style.display='none'; }
-window.addEventListener('resize', ()=>{ if(window.innerWidth>768&&navLinks.classList.contains('active')){ hamburger.classList.remove('active'); navLinks.classList.remove('active'); document.body.style.overflow=''; } });
+if('ontouchstart' in window){document.body.style.cursor='auto';document.querySelectorAll('a,button').forEach(el=>el.style.cursor='pointer');document.getElementById('cursor').style.display='none';document.getElementById('cursor-ring').style.display='none';}
+window.addEventListener('resize',()=>{if(window.innerWidth>768&&navLinks.classList.contains('active')){hamburger.classList.remove('active');navLinks.classList.remove('active');document.body.style.overflow='';}});
 </script>
 </body>
 </html>
