@@ -106,11 +106,19 @@
   /* ===== NAV LINK TEXT SPLIT ANIMATION ===== */
   .nav-links a .nav-text-wrap { display: inline-block; overflow: hidden; vertical-align: top; }
   .nav-links a .nav-text-inner { display: block; transition: transform 0.38s cubic-bezier(0.77,0,0.175,1); }
-  .nav-links a .nav-text-clone { display: block; position: absolute; top: 100%; left: 0; color: var(--accent2); transition: transform 0.38s cubic-bezier(0.77,0,0.175,1); }
+.nav-links a .nav-text-clone {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: var(--accent2);
+    transition: transform 0.38s cubic-bezier(0.77, 0, 0.175, 1);
+    padding-left: 20px;
+}
   .nav-links a:hover .nav-text-inner { transform: translateY(-100%); }
   .nav-links a:hover .nav-text-clone {
     transform: translateY(-100%);
-    padding-left: 22px;
+    padding-left: 20px;
 }
 
   .hamburger { display: none; flex-direction: column; cursor: none; padding: 0.5rem; gap: 4px; }
