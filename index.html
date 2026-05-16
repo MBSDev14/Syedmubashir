@@ -108,7 +108,10 @@
   .nav-links a .nav-text-inner { display: block; transition: transform 0.38s cubic-bezier(0.77,0,0.175,1); }
   .nav-links a .nav-text-clone { display: block; position: absolute; top: 100%; left: 0; color: var(--accent2); transition: transform 0.38s cubic-bezier(0.77,0,0.175,1); }
   .nav-links a:hover .nav-text-inner { transform: translateY(-100%); }
-  .nav-links a:hover .nav-text-clone { transform: translateY(-100%); }
+  .nav-links a:hover .nav-text-clone {
+    transform: translateY(-100%);
+    padding-left: 22px;
+}
 
   .hamburger { display: none; flex-direction: column; cursor: none; padding: 0.5rem; gap: 4px; }
   .hamburger span { width: 25px; height: 3px; background: var(--text); transition: all 0.3s; transform-origin: center; }
