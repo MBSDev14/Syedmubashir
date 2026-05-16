@@ -342,6 +342,14 @@
   @media (max-width: 1100px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 1024px) { nav { padding: 1.2rem 2rem; } .about-grid { grid-template-columns: 1fr; gap: 3rem; } .about-visual { display: flex; justify-content: center; } .resume-content { flex-direction: column; align-items: flex-start; } .resume-btns { flex-direction: row; } }
   @media (max-width: 768px) {
+.nav-links a:hover .nav-text-clone {
+    padding-left: 340px;
+}
+
+.nav-links a .nav-text-clone {
+    padding-left: 340px;
+}
+    
     nav { padding: 1rem 1.5rem; }
     .nav-links { position: fixed; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: rgba(5,5,8,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--glass-border); transform: translateY(-100%); opacity: 0; visibility: hidden; transition: all 0.3s ease; padding: 2rem 1.5rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
     .nav-links.active { transform: translateY(0); opacity: 1; visibility: visible; }
