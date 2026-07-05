@@ -92,6 +92,9 @@
   #contact .blob-contact { width: 600px; height: 600px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
   #resume { position: relative; overflow: hidden; }
   #resume .blob-resume { width: 500px; height: 400px; top: 30%; left: 50%; transform: translateX(-50%); }
+  #links { position: relative; overflow: hidden; }
+  #links .blob-links-1 { width: 500px; height: 500px; top: 0%; left: -120px; }
+  #links .blob-links-2 { width: 450px; height: 450px; bottom: 0%; right: -100px; }
 
   nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 1.2rem 3rem; display: flex; align-items: center; justify-content: space-between; background: rgba(5,5,8,0.6); backdrop-filter: blur(20px); border-bottom: 1px solid var(--glass-border); transition: all 0.4s; }
   .nav-logo { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.04); transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
@@ -244,7 +247,6 @@
   .project-img { position: relative; height: 200px; overflow: hidden; flex-shrink: 0; }
   .project-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.55s cubic-bezier(0.23,1,0.32,1), filter 0.4s ease; filter: brightness(0.78) saturate(1.05); }
   .project-card:hover .project-img img { transform: scale(1.09); filter: brightness(0.92) saturate(1.15); }
-  /* .project-img::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60%; background: linear-gradient(to top, rgba(5,5,8,0.85) 0%, transparent 100%); pointer-events: none; z-index: 1; } */
   .img-badge { position: absolute; bottom: 12px; left: 14px; z-index: 2; display: inline-flex; align-items: center; gap: 6px; padding: 5px 13px; background: rgba(5,5,8,0.72); backdrop-filter: blur(10px); border: 1px solid rgba(62,207,207,0.3); border-radius: 100px; font-size: 0.71rem; font-family: 'Space Grotesk', sans-serif; color: var(--accent2); letter-spacing: 0.04em; font-weight: 500; }
   .img-badge i { font-size: 0.62rem; }
   .img-wp { position: absolute; top: 12px; right: 14px; z-index: 2; display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; background: rgba(5,5,8,0.7); backdrop-filter: blur(8px); border: 1px solid rgba(124,92,191,0.35); border-radius: 100px; font-size: 0.68rem; font-family: 'Space Grotesk', sans-serif; color: #a78bfa; font-weight: 500; }
@@ -338,6 +340,32 @@
   /* ===== MAGNETIC BTN ===== */
   .btn { will-change: transform; }
 
+  /* ===== LINKS SECTION ===== */
+  .links-inner { max-width: 1200px; margin: 0 auto; }
+  .links-header { text-align: center; margin-bottom: 3rem; }
+  .links-header p { color: var(--muted); font-size: 0.95rem; max-width: 560px; margin: 0.8rem auto 0; }
+  .links-search-wrap { max-width: 460px; margin: 1.8rem auto 0; position: relative; }
+  .links-search { width: 100%; padding: 0.85rem 1.3rem 0.85rem 2.8rem; border-radius: 100px; background: var(--glass); border: 1px solid var(--glass-border); color: var(--text); font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.3s, background 0.3s; cursor: text; }
+  .links-search::placeholder { color: var(--muted); }
+  .links-search:focus { border-color: rgba(62,207,207,0.4); background: rgba(62,207,207,0.05); }
+  .links-search-icon { position: absolute; left: 1.1rem; top: 50%; transform: translateY(-50%); color: var(--accent2); font-size: 0.85rem; pointer-events: none; }
+  .links-count { text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 3rem; margin-bottom: 1.5rem; letter-spacing: 0.04em; }
+  .links-count span { color: var(--accent2); font-weight: 600; }
+  .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+  .link-card { display: flex; align-items: center; gap: 12px; padding: 1.1rem 1.3rem; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px; backdrop-filter: blur(10px); text-decoration: none; color: var(--text); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease; position: relative; overflow: hidden; }
+  .link-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--accent2), transparent); opacity: 0; transition: opacity 0.4s; }
+  .link-card:hover { transform: translateY(-5px); border-color: rgba(62,207,207,0.3); background: rgba(62,207,207,0.05); box-shadow: 0 16px 40px rgba(62,207,207,0.1); }
+  .link-card:hover::before { opacity: 1; }
+  .link-icon { width: 40px; height: 40px; flex-shrink: 0; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.05rem; background: linear-gradient(135deg, rgba(62,207,207,0.14), rgba(124,92,191,0.12)); border: 1px solid rgba(62,207,207,0.2); color: var(--accent2); transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1); }
+  .link-card:hover .link-icon { transform: rotate(-8deg) scale(1.08); }
+  .link-info { flex: 1; min-width: 0; }
+  .link-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.92rem; text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .link-sub { font-size: 0.72rem; color: var(--muted); margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .link-arrow { color: rgba(240,238,255,0.2); font-size: 0.8rem; flex-shrink: 0; transition: all 0.25s ease; }
+  .link-card:hover .link-arrow { color: var(--accent2); transform: translateX(3px); }
+  .links-empty { text-align: center; color: var(--muted); font-size: 0.9rem; padding: 3rem 1rem; display: none; }
+  .links-empty.show { display: block; }
+
   @media (max-width: 1600px) { .scroll-indicator { bottom: -2rem; } #about,#skills,#experience,#projects { padding: 2rem 2rem; } }
   @media (max-width: 1100px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 1024px) { nav { padding: 1.2rem 2rem; } .about-grid { grid-template-columns: 1fr; gap: 3rem; } .about-visual { display: flex; justify-content: center; } .resume-content { flex-direction: column; align-items: flex-start; } .resume-btns { flex-direction: row; } }
@@ -361,7 +389,7 @@
     .hero-sub { font-size: 0.95rem; }
     .hero-cta { flex-direction: column; align-items: center; }
     .btn { width: 100%; max-width: 280px; justify-content: center; }
-    #about,#skills,#experience,#projects,#contact,#resume { padding: 3rem 1rem; }
+    #about,#skills,#experience,#projects,#contact,#resume,#links { padding: 3rem 1rem; }
     .about-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
     .avatar-container { width: 260px; height: 260px; margin: 0 auto; }
     .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
@@ -378,13 +406,14 @@
     .resume-btns { flex-direction: column; width: 100%; }
     .res-btn { justify-content: center; }
     .rm-close { width: 64px; }
+    .links-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 480px) {
     h1 { font-size: clamp(2rem, 10vw, 3.5rem); }
     .avatar-container { width: 220px; height: 220px; }
     .section-title { font-size: clamp(1.4rem, 4vw, 3.2rem); }
     .intro-section { padding: 2rem 1rem; }
-    #about,#skills,#experience,#projects,#contact,#resume { padding: 2rem 1rem; }
+    #about,#skills,#experience,#projects,#contact,#resume,#links { padding: 2rem 1rem; }
     .social-links { flex-wrap: wrap; gap: 12px; }
     .social-link { width: 100%; }
     .project-img { height: 170px; }
@@ -859,6 +888,72 @@
   </div>
 </div>
 
+<!-- LINKS -->
+<section id="links" data-scroll-section>
+  <div class="section-bg-blob blob-teal blob-links-1"></div>
+  <div class="section-bg-blob blob-purple blob-links-2"></div>
+  <canvas class="section-particle-canvas" id="links-particles"></canvas>
+
+  <div class="links-inner">
+    <div class="links-header gsap-fade-up">
+      <div class="section-tag" style="justify-content:center"><i class="fas fa-link"></i> Client Portals</div>
+      <h2 class="section-title gradient-text">Project Links</h2>
+      <p>Quick access to all client project pages.</p>
+      <div class="links-search-wrap">
+        <i class="fas fa-magnifying-glass links-search-icon"></i>
+        <input type="text" class="links-search" id="linksSearch" placeholder="Search a project name...">
+      </div>
+    </div>
+
+    <div class="links-count" id="linksCount"></div>
+
+    <div class="links-grid" id="linksGrid">
+      <a class="link-card" data-name="charlesfrazier" href="https://samplelinksweb.com/charlesfrazier/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">charlesfrazier</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="pak reit association" href="https://samplelinksweb.com/pak_reit_association/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">pak reit association</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="team mauricio" href="https://samplelinksweb.com/team_mauricio/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">team mauricio</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="kiara alston1" href="https://samplelinksweb.com/kiara_alston1/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">kiara alston1</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="tabitha jean" href="https://samplelinksweb.com/tabitha_jean/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">tabitha jean</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="chris robin1" href="https://samplelinksweb.com/chris_robin1/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">chris robin1</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="ben 1" href="https://samplelinksweb.com/ben_1/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">ben 1</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="debbie felton" href="https://samplelinksweb.com/debbie_felton/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">debbie felton</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="kace" href="https://samplelinksweb.com/kace/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">kace</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="vertex digital" href="https://samplelinksweb.com/vertex_digital/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">vertex digital</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="lawrence aflague" href="https://samplelinksweb.com/lawrence_aflague/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">lawrence aflague</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="brick bloom1" href="https://samplelinksweb.com/brick_bloom1/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">brick bloom1</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="andrea saadachic" href="https://samplelinksweb.com/andrea_saadachic/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">andrea saadachic</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="adrian 1" href="https://samplelinksweb.com/adrian_1/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">adrian 1</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="alex quick" href="https://samplelinksweb.com/alex_quick/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">alex quick</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="steviejo callaway" href="https://samplelinksweb.com/steviejo_callaway/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">steviejo callaway</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="jessica rodriguez" href="https://samplelinksweb.com/jessica_rodriguez/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">jessica rodriguez</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="smartway" href="https://samplelinksweb.com/smartway/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">smartway</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="aquilina" href="https://samplelinksweb.com/aquilina/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">aquilina</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="nanettezendejas" href="https://samplelinksweb.com/nanettezendejas/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">nanettezendejas</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="cassandra" href="https://samplelinksweb.com/cassandra/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">cassandra</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="damian 1" href="https://samplelinksweb.com/damian_1/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">damian 1</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="donna 1" href="https://samplelinksweb.com/donna_1/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">donna 1</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="jennifer chandler" href="https://samplelinksweb.com/jennifer_chandler/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">jennifer chandler</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="donna 2nd" href="https://samplelinksweb.com/donna_2nd/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">donna 2nd</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="bobby-morton" href="https://samplelinksweb.com/bobby-morton/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">bobby-morton</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="vicente p brando" href="https://samplelinksweb.com/vicente_p_brando/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">vicente p brando</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="collins" href="https://samplelinksweb.com/collins/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">collins</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="sammy rivera" href="https://samplelinksweb.com/sammy_rivera/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">sammy rivera</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="jaymin mcjimpson" href="https://samplelinksweb.com/Jaymin_McJimpson/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">Jaymin McJimpson</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="brother" href="https://samplelinksweb.com/brother/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">brother</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="shalen" href="https://samplelinksweb.com/shalen/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">shalen</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="cezhan" href="https://samplelinksweb.com/Cezhan/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">Cezhan</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="james kc it" href="https://samplelinksweb.com/James_kc_it/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">James kc it</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="stuckey" href="https://samplelinksweb.com/stuckey/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">stuckey</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="adamfaul" href="https://samplelinksweb.com/adamfaul/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">adamfaul</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="bobbymorton" href="https://samplelinksweb.com/BobbyMorton/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">BobbyMorton</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="abc logistic" href="https://samplelinksweb.com/abc_logistic/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">abc logistic</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="tanisha" href="https://samplelinksweb.com/Tanisha/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">Tanisha</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="thompson" href="https://samplelinksweb.com/thompson/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">thompson</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+      <a class="link-card" data-name="mike kahler" href="https://samplelinksweb.com/mike_kahler/" target="_blank" rel="noopener"><div class="link-icon"><i class="fas fa-globe"></i></div><div class="link-info"><div class="link-name">mike kahler</div><div class="link-sub">samplelinksweb.com</div></div><i class="fas fa-chevron-right link-arrow"></i></a>
+    </div>
+    <div class="links-empty" id="linksEmpty"><i class="fas fa-circle-info" style="margin-right:6px;color:var(--accent2)"></i>No matching project found.</div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" data-scroll-section>
   <div class="section-bg-blob blob-purple blob-contact"></div>
@@ -1073,6 +1168,10 @@ document.querySelectorAll('.exp-item').forEach((item, i) => {
 
 stReveal('.resume-header', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '#resume');
 stReveal('.resume-card', { opacity: 0, y: 50, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.9, ease: 'power3.out' }, '#resume');
+stReveal('.links-header', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '#links');
+document.querySelectorAll('.link-card').forEach((card, i) => {
+  stReveal(card, { opacity: 0, y: 30, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: 'power3.out', delay: (i % 8) * 0.05 }, card, 'top 92%');
+});
 stReveal('#contact .gsap-fade-up', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '#contact');
 stReveal('.contact-card', { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 1, ease: 'power3.out', delay: 0.2 }, '#contact');
 
@@ -1094,6 +1193,8 @@ setupBlobReveal(document.querySelector('#experience .blob-exp'), '#experience');
 setupBlobReveal(document.querySelector('#projects .blob-proj-1'), '#projects');
 setupBlobReveal(document.querySelector('#projects .blob-proj-2'), '#projects');
 setupBlobReveal(document.querySelector('#resume .blob-resume'), '#resume');
+setupBlobReveal(document.querySelector('#links .blob-links-1'), '#links');
+setupBlobReveal(document.querySelector('#links .blob-links-2'), '#links');
 setupBlobReveal(document.querySelector('#contact .blob-contact'), '#contact');
 
 document.querySelectorAll('.section-bg-blob').forEach((blob, i) => {
@@ -1230,6 +1331,39 @@ document.querySelectorAll('.intro-card p').forEach((p, i) => {
 });
 
 /* ======================================================
+   ★ NEW: LINKS SECTION — LIVE SEARCH FILTER
+====================================================== */
+(function initLinksSearch() {
+  const searchInput = document.getElementById('linksSearch');
+  const grid = document.getElementById('linksGrid');
+  const emptyState = document.getElementById('linksEmpty');
+  const countEl = document.getElementById('linksCount');
+  if (!searchInput || !grid) return;
+  const cards = Array.from(grid.querySelectorAll('.link-card'));
+  const total = cards.length;
+
+  function updateCount(visible) {
+    countEl.innerHTML = `Showing <span>${visible}</span> of <span>${total}</span> project links`;
+  }
+
+  function filterLinks() {
+    const q = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    cards.forEach(card => {
+      const name = card.getAttribute('data-name') || '';
+      const match = name.includes(q);
+      card.style.display = match ? '' : 'none';
+      if (match) visibleCount++;
+    });
+    emptyState.classList.toggle('show', visibleCount === 0);
+    updateCount(visibleCount);
+  }
+
+  searchInput.addEventListener('input', filterLinks);
+  updateCount(total);
+})();
+
+/* ======================================================
    ★ NEW: GSAP SECTION PARTICLE SYSTEM (Canvas 2D)
 ====================================================== */
 class SectionParticles {
@@ -1352,6 +1486,7 @@ const sectionParticles = {
   'skills-particles':   new SectionParticles('skills-particles',   { count:35, color1:'62,207,207', color2:'124,92,191', speed:0.32, connectDist:120, opacity:0.45 }),
   'exp-particles':      new SectionParticles('exp-particles',      { count:28, color1:'124,92,191', color2:'62,207,207', speed:0.25, connectDist:110, opacity:0.4 }),
   'resume-particles':   new SectionParticles('resume-particles',   { count:25, color1:'62,207,207', color2:'245,166,35', speed:0.22, connectDist:100, opacity:0.38 }),
+  'links-particles':    new SectionParticles('links-particles',    { count:30, color1:'62,207,207', color2:'124,92,191', speed:0.25, connectDist:115, opacity:0.4 }),
   'contact-particles':  new SectionParticles('contact-particles',  { count:40, color1:'124,92,191', color2:'62,207,207', speed:0.35, connectDist:130, opacity:0.5 }),
 };
 
@@ -1364,6 +1499,7 @@ Object.entries({
   'skills-particles':   '#skills',
   'exp-particles':      '#experience',
   'resume-particles':   '#resume',
+  'links-particles':    '#links',
   'contact-particles':  '#contact',
 }).forEach(([canvasId, sectionId]) => {
   const canvas = document.getElementById(canvasId);
